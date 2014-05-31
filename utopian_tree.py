@@ -17,26 +17,32 @@
 # Print the height of the Utopian tree after N cycles.
 
 # Sample Input #00:
-
 # 2
 # 0
 # 1
-# Sample Output #00:
 
-# 1 2 Explanation #00: There are 2 testcases. When N = 0, the height of the tree
-# remains unchanged. When N = 1, the tree doubles its height as it’s planted
+# Sample Output #00:
+# 1
+# 2
+
+# Explanation #00: There are 2 testcases. When N = 0, the height of the tree
+# remains unchanged. When N = 1, the tree doubles its height as it's planted
 # just before the onset of monsoon.
 
 # Sample Input: #01:
-
 # 2
 # 3
 # 4
-# Sample Output: #01:
 
-# 6 7 Explanation: #01: There are 2 testcases. When N = 3, the height of the
+# Sample Output: #01:
+# 6
+# 7
+
+# Explanation: #01: There are 2 testcases. When N = 3, the height of the
 # tree at the end of the 1st cycle doubles to 2, at the end of the 2nd cycle it
 # increases by 1 and at the end of the 3rd cycle, it doubles its height to 6.
 # When N = 4, the height of the tree increases from 6 to 7.
 
-# total = raw_input()
+for _ in range(int(raw_input())):
+    n = int(raw_input())
+    print pow(2, (n + 1)/2 + 1) - 1 - (n % 2)
