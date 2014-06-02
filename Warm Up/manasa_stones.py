@@ -17,8 +17,8 @@
 # stone in increasing order.
 
 # Constraints
-# 1 ≤ T ≤ 10
-# 1 ≤ n, a, b ≤ 103
+# 1 <= T <= 10
+# 1 <= n, a, b <= 103
 
 # Sample Input 00
 # 2
@@ -53,3 +53,16 @@
 # 0, 100, 200, 300
 
 # hence the answer 30 120 210 300
+
+for _ in range(input()):
+    steps = []
+    number_of_steps = input()
+    a = input()
+    b = input()
+    a, b = min(a, b), max(a, b)
+    min_steps = (number_of_steps - 1) * a
+    for i in range(0, number_of_steps):
+        step = min_steps - a * i + b * i
+        if step not in steps:
+            steps.append(step)
+    print ' '.join(map(str, steps))
